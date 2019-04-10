@@ -35,6 +35,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('./routes'));
 
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
-server.listen(3001, () => {
+server.listen(process.env.PORT || 3001, () => {
   console.log('Server in the port 3001');
 });
