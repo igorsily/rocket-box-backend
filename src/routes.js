@@ -7,6 +7,7 @@ const routes = express.Router();
 const BoxController = require('./controllers/BoxController');
 const FileController = require('./controllers/FileController');
 
+routes.get('/', (req, res) => res.send('Olá!!'));
 routes.post('/boxes', BoxController.store);
 routes.get('/boxes/:id', BoxController.show);
 
